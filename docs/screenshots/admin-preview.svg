@@ -1,0 +1,29 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F6F7FB"/>
+  <rect x="82" y="64" width="1036" height="592" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="132" y="126" font-family="Arial" font-size="15" font-weight="700" fill="#0F766E">Painel administrativo</text>
+  <text x="132" y="170" font-family="Arial" font-size="38" font-weight="800" fill="#132238">Saude da comunidade</text>
+  <rect x="132" y="220" width="295" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="164" y="287" font-family="Arial" font-size="48" font-weight="800" fill="#132238">4</text>
+  <text x="164" y="322" font-family="Arial" font-size="16" fill="#64748B">usuarios cadastrados</text>
+  <rect x="453" y="220" width="295" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="485" y="287" font-family="Arial" font-size="48" font-weight="800" fill="#132238">3</text>
+  <text x="485" y="322" font-family="Arial" font-size="16" fill="#64748B">publicacoes</text>
+  <rect x="774" y="220" width="295" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="806" y="287" font-family="Arial" font-size="48" font-weight="800" fill="#132238">3</text>
+  <text x="806" y="322" font-family="Arial" font-size="16" fill="#64748B">grupos ativos</text>
+  <rect x="132" y="404" width="456" height="196" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="164" y="449" font-family="Arial" font-size="24" font-weight="800" fill="#132238">Ranking</text>
+  <text x="164" y="494" font-family="Arial" font-size="16" fill="#334155">Leonardo Queiroz</text>
+  <text x="512" y="494" font-family="Arial" font-size="16" font-weight="700" fill="#132238">140 pts</text>
+  <line x1="164" y1="516" x2="556" y2="516" stroke="#E2E8F0"/>
+  <text x="164" y="550" font-family="Arial" font-size="16" fill="#334155">Ana Silva</text>
+  <text x="520" y="550" font-family="Arial" font-size="16" font-weight="700" fill="#132238">88 pts</text>
+  <rect x="620" y="404" width="449" height="196" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="652" y="449" font-family="Arial" font-size="24" font-weight="800" fill="#132238">Posts recentes</text>
+  <text x="652" y="494" font-family="Arial" font-size="16" font-weight="700" fill="#334155">Trilha de estudos para API REST</text>
+  <text x="652" y="520" font-family="Arial" font-size="14" fill="#64748B">Ana Silva · 1 curtida</text>
+  <line x1="652" y1="540" x2="1036" y2="540" stroke="#E2E8F0"/>
+  <text x="652" y="572" font-family="Arial" font-size="16" font-weight="700" fill="#334155">Projeto de extensao</text>
+  <text x="652" y="598" font-family="Arial" font-size="14" fill="#64748B">Bruno Lima · comunidade ativa</text>
+</svg>

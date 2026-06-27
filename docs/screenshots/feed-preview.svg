@@ -1,0 +1,45 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#F6F7FB"/>
+  <rect x="0" y="0" width="250" height="720" fill="#FFFFFF"/>
+  <rect x="28" y="30" width="48" height="48" rx="8" fill="#0F766E"/>
+  <text x="92" y="54" font-family="Arial" font-size="24" font-weight="700" fill="#132238">Conecta+</text>
+  <text x="92" y="73" font-family="Arial" font-size="13" fill="#64748B">Comunidade academica</text>
+  <rect x="28" y="122" width="194" height="42" rx="6" fill="#ECFDF5"/>
+  <text x="62" y="148" font-family="Arial" font-size="15" font-weight="700" fill="#0F766E">Feed</text>
+  <text x="62" y="202" font-family="Arial" font-size="15" fill="#475569">Grupos</text>
+  <text x="62" y="252" font-family="Arial" font-size="15" fill="#475569">Perfil</text>
+  <text x="62" y="302" font-family="Arial" font-size="15" fill="#475569">Impacto</text>
+  <rect x="250" y="0" width="950" height="66" fill="#FFFFFF"/>
+  <text x="286" y="28" font-family="Arial" font-size="13" fill="#64748B">Ola, Leonardo Queiroz</text>
+  <text x="286" y="50" font-family="Arial" font-size="19" font-weight="700" fill="#132238">Conecta+ Social Network</text>
+  <rect x="286" y="102" width="560" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="318" y="137" font-family="Arial" font-size="14" font-weight="700" fill="#0F766E">Feed inteligente</text>
+  <text x="318" y="171" font-family="Arial" font-size="28" font-weight="800" fill="#132238">Publicacoes da comunidade</text>
+  <rect x="318" y="198" width="300" height="36" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="338" y="221" font-family="Arial" font-size="14" fill="#64748B">Buscar por assunto ou pessoa</text>
+  <rect x="636" y="198" width="116" height="36" rx="6" fill="#0F766E"/>
+  <text x="674" y="221" font-family="Arial" font-size="14" font-weight="700" fill="#FFFFFF">Filtrar</text>
+  <rect x="286" y="276" width="560" height="310" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="326" cy="324" r="22" fill="#0F766E"/>
+  <text x="319" y="332" font-family="Arial" font-size="20" font-weight="700" fill="#FFFFFF">A</text>
+  <text x="362" y="318" font-family="Arial" font-size="17" font-weight="700" fill="#132238">Ana Silva</text>
+  <text x="362" y="340" font-family="Arial" font-size="12" fill="#64748B">Analise e Desenvolvimento de Sistemas · 88 pts</text>
+  <rect x="734" y="304" width="78" height="27" rx="13" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="752" y="322" font-family="Arial" font-size="12" font-weight="700" fill="#475569">estudos</text>
+  <text x="318" y="388" font-family="Arial" font-size="25" font-weight="800" fill="#132238">Trilha de estudos para API REST</text>
+  <text x="318" y="426" font-family="Arial" font-size="16" fill="#475569">Roteiro com HTTP, middlewares, validacao com Zod, Prisma e testes.</text>
+  <rect x="318" y="464" width="82" height="28" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="337" y="482" font-family="Arial" font-size="12" font-weight="700" fill="#475569">#estudos</text>
+  <rect x="410" y="464" width="82" height="28" rx="14" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="431" y="482" font-family="Arial" font-size="12" font-weight="700" fill="#475569">#duvidas</text>
+  <line x1="318" y1="518" x2="814" y2="518" stroke="#E2E8F0"/>
+  <rect x="318" y="540" width="72" height="34" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="346" y="562" font-family="Arial" font-size="13" font-weight="700" fill="#334155">1</text>
+  <text x="406" y="562" font-family="Arial" font-size="14" fill="#64748B">1 comentario</text>
+  <rect x="880" y="102" width="250" height="226" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="912" y="139" font-family="Arial" font-size="14" font-weight="700" fill="#F97316">Como ganhar pontos</text>
+  <text x="912" y="174" font-family="Arial" font-size="24" font-weight="800" fill="#132238">Ranking</text>
+  <text x="912" y="214" font-family="Arial" font-size="15" fill="#475569">Publicar: +12 pontos</text>
+  <text x="912" y="244" font-family="Arial" font-size="15" fill="#475569">Comentar: +4 pontos</text>
+  <text x="912" y="274" font-family="Arial" font-size="15" fill="#475569">Receber curtida: +2 pontos</text>
+</svg>
