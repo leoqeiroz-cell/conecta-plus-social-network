@@ -14,6 +14,10 @@ export const userRepository = {
     return prisma.user.create({ data });
   },
 
+  update(id: string, data: Prisma.UserUpdateInput) {
+    return prisma.user.update({ where: { id }, data });
+  },
+
   search(query: string) {
     return prisma.user.findMany({
       where: {

@@ -14,6 +14,8 @@ export const commentSchema = z.object({
   content: z.string().min(2).max(600)
 });
 
+export const updateCommentSchema = commentSchema;
+
 export const postQuerySchema = z.object({
   search: z.string().optional(),
   category: z.nativeEnum(PostCategory).optional(),

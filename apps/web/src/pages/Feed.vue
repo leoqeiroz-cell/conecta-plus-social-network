@@ -59,8 +59,14 @@ onMounted(() => posts.fetchPosts());
         :key="post.id"
         :post="post"
         :liked="post.likes.some((like) => like.authorId === auth.user?.id)"
+        :current-user-id="auth.user?.id"
+        :is-admin="auth.isAdmin"
         @like="posts.like"
         @comment="posts.comment"
+        @update-post="posts.updatePost"
+        @delete-post="posts.deletePost"
+        @update-comment="posts.updateComment"
+        @delete-comment="posts.deleteComment"
       />
     </section>
 

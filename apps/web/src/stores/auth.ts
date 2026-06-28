@@ -38,6 +38,12 @@ export const useAuthStore = defineStore("auth", () => {
     localStorage.setItem("conecta.user", JSON.stringify(data));
   }
 
+  async function updateProfile(input: { name: string; course: string; bio: string; avatarUrl: string | null }) {
+    const { data } = await api.put<User>("/users/me", input);
+    user.value = data;
+    localStorage.setItem("conecta.user", JSON.stringify(data));
+  }
+
   function logout() {
     token.value = null;
     user.value = null;
@@ -45,5 +51,5 @@ export const useAuthStore = defineStore("auth", () => {
     localStorage.removeItem("conecta.user");
   }
 
-  return { token, user, isAuthenticated, isAdmin, login, register, refresh, logout };
+  return { token, user, isAuthenticated, isAdmin, login, register, refresh, updateProfile, logout };
 });

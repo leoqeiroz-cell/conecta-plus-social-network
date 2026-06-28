@@ -171,14 +171,35 @@ export const openApiSpec = {
         }
       },
       UpdatePostInput: {
-        allOf: [ref("CreatePostInput")],
-        description: "Todos os campos sao opcionais para atualizacao parcial."
+        type: "object",
+        description: "Todos os campos sao opcionais para atualizacao parcial.",
+        properties: {
+          title: { type: "string", minLength: 4, maxLength: 120, example: "Dicas atualizadas para estudar TypeScript" },
+          content: { type: "string", minLength: 10, maxLength: 2200, example: "Atualizei o roteiro com novos exemplos e referencias." },
+          category: { type: "string", enum: ["ESTUDOS", "PROJETOS", "EMPREGO", "DUVIDAS"], example: "ESTUDOS" },
+          tags: { type: "array", minItems: 1, maxItems: 5, items: { type: "string" }, example: ["estudos", "projetos"] }
+        }
       },
       CommentInput: {
         type: "object",
         required: ["content"],
         properties: {
           content: { type: "string", minLength: 2, maxLength: 600, example: "Esse material ajudou bastante." }
+        }
+      },
+      UpdateProfileInput: {
+        type: "object",
+        required: ["name", "course"],
+        properties: {
+          name: { type: "string", minLength: 3, maxLength: 80, example: "Leonardo Queiroz" },
+          course: { type: "string", minLength: 3, maxLength: 120, example: "Desenvolvimento Full Stack" },
+          bio: { type: "string", maxLength: 600, example: "Administrador da comunidade Conecta+." },
+          avatarUrl: {
+            type: "string",
+            nullable: true,
+            description: "URL publica ou data URL base64 de imagem enviada pelo usuario.",
+            example: "data:image/svg+xml;utf8,%3Csvg..."
+          }
         }
       },
       LikeResponse: {
@@ -358,6 +379,32 @@ export const openApiSpec = {
         }
       }
     },
+    "/posts/comments/{commentId}": {
+      put: {
+        tags: ["Posts"],
+        summary: "Atualiza comentario do autor",
+        security: authSecurity,
+        parameters: [idParameter("commentId", "ID do comentario")],
+        requestBody: { required: true, ...json(ref("CommentInput")) },
+        responses: {
+          "200": { description: "Comentario atualizado", ...json(ref("Comment")) },
+          "403": { description: "Usuario nao e autor do comentario", ...json(ref("ErrorResponse")) },
+          "404": { description: "Comentario nao encontrado", ...json(ref("ErrorResponse")) },
+          "422": { description: "Dados invalidos", ...json(ref("ValidationErrorResponse")) }
+        }
+      },
+      delete: {
+        tags: ["Posts"],
+        summary: "Remove comentario do autor ou por administrador",
+        security: authSecurity,
+        parameters: [idParameter("commentId", "ID do comentario")],
+        responses: {
+          "200": { description: "Comentario removido", ...json(ref("DeleteResponse")) },
+          "403": { description: "Acao nao permitida", ...json(ref("ErrorResponse")) },
+          "404": { description: "Comentario nao encontrado", ...json(ref("ErrorResponse")) }
+        }
+      }
+    },
     "/users/search": {
       get: {
         tags: ["Users"],
@@ -366,6 +413,19 @@ export const openApiSpec = {
         parameters: [{ name: "q", in: "query", required: false, schema: { type: "string" } }],
         responses: {
           "200": { description: "Usuarios encontrados", ...json({ type: "array", items: ref("User") }) }
+        }
+      }
+    },
+    "/users/me": {
+      put: {
+        tags: ["Users"],
+        summary: "Atualiza perfil do usuario autenticado",
+        security: authSecurity,
+        requestBody: { required: true, ...json(ref("UpdateProfileInput")) },
+        responses: {
+          "200": { description: "Perfil atualizado", ...json(ref("User")) },
+          "401": { description: "Token ausente ou invalido", ...json(ref("ErrorResponse")) },
+          "422": { description: "Dados invalidos", ...json(ref("ValidationErrorResponse")) }
         }
       }
     },

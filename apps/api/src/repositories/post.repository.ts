@@ -79,6 +79,25 @@ export const postRepository = {
     });
   },
 
+  findCommentById(id: string) {
+    return prisma.comment.findUnique({
+      where: { id },
+      include: { author: true, post: true }
+    });
+  },
+
+  updateComment(id: string, content: string) {
+    return prisma.comment.update({
+      where: { id },
+      data: { content },
+      include: { author: true }
+    });
+  },
+
+  deleteComment(id: string) {
+    return prisma.comment.delete({ where: { id } });
+  },
+
   count() {
     return prisma.post.count();
   },

@@ -12,9 +12,10 @@ Muitas comunidades academicas perdem conhecimento em conversas dispersas, grupos
 
 - Cadastro, login e sessao protegida com JWT.
 - Perfil de usuario com curso, bio, avatar e pontuacao.
+- Edicao de perfil com upload de foto ou escolha de avatares prontos.
 - Feed de publicacoes com busca, filtro por categoria e tags.
-- CRUD de posts para autores autenticados.
-- Comentarios e curtidas com impacto no ranking.
+- CRUD de posts para autores autenticados, com moderacao por administrador.
+- Comentarios editaveis/removiveis e curtidas com alternancia entre curtir e descurtir.
 - Tags iniciais: `#estudos`, `#projetos`, `#emprego` e `#duvidas`.
 - Modo comunidade com grupos de estudo e participacao.
 - Painel administrativo com indicadores, posts recentes e usuarios ativos.
@@ -145,7 +146,10 @@ Usuario:
 | DELETE | `/api/posts/:id` | Remove publicacao |
 | POST | `/api/posts/:id/like` | Alterna curtida |
 | POST | `/api/posts/:id/comments` | Adiciona comentario |
+| PUT | `/api/posts/comments/:commentId` | Atualiza comentario |
+| DELETE | `/api/posts/comments/:commentId` | Remove comentario |
 | GET | `/api/users/search` | Busca usuarios |
+| PUT | `/api/users/me` | Atualiza perfil, bio e avatar |
 | GET | `/api/groups` | Lista grupos |
 | POST | `/api/groups/:id/join` | Entra ou sai de um grupo |
 | GET | `/api/admin/metrics` | Indicadores administrativos |
@@ -157,6 +161,8 @@ Usuario:
 - Ranking de colaboracao calculado por publicacoes, comentarios e interacoes.
 - Grupos de estudo como camada comunitaria alem do feed.
 - Feed com filtros por categoria, busca textual e tags academicas.
+- Conteudo gerenciavel pelo proprio usuario, incluindo edicao, exclusao e moderacao.
+- Perfil personalizavel com avatar gerado ou foto enviada pelo estudante.
 - Painel administrativo para leitura rapida de saude da comunidade.
 - UX com dark mode e interface responsiva voltada para apresentacao de hackathon.
 

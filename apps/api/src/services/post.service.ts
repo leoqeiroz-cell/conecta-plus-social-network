@@ -65,5 +65,20 @@ export const postService = {
     await userRepository.incrementPoints(authorId, 4);
     if (post.authorId !== authorId) await userRepository.incrementPoints(post.authorId, 1);
     return comment;
+  },
+
+  async updateComment(commentId: string, authorId: string, content: string) {
+    const comment = await postRepository.findCommentById(commentId);
+    if (!comment) throw new AppError("Comentario nao encontrado.", 404);
+    if (comment.authorId !== authorId) throw new AppError("Voce so pode editar seus comentarios.", 403);
+    return postRepository.updateComment(commentId, content);
+  },
+
+  async deleteComment(commentId: string, authorId: string, role: "USER" | "ADMIN") {
+    const comment = await postRepository.findCommentById(commentId);
+    if (!comment) throw new AppError("Comentario nao encontrado.", 404);
+    if (comment.authorId !== authorId && role !== "ADMIN") throw new AppError("Acao nao permitida.", 403);
+    await postRepository.deleteComment(commentId);
+    return { ok: true };
   }
 };

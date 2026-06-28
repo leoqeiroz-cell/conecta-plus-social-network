@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { updateProfileSchema } from "@/schemas/user.schema.js";
 import { userService } from "@/services/user.service.js";
 
 export const userController = {
@@ -11,5 +12,11 @@ export const userController = {
   async leaderboard(_req: Request, res: Response) {
     const users = await userService.leaderboard();
     return res.json(users);
+  },
+
+  async updateProfile(req: Request, res: Response) {
+    const data = updateProfileSchema.parse(req.body);
+    const user = await userService.updateProfile(req.user!.id, data);
+    return res.json(user);
   }
 };

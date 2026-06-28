@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { commentSchema, createPostSchema, postQuerySchema, updatePostSchema } from "@/schemas/post.schema.js";
+import { commentSchema, createPostSchema, postQuerySchema, updateCommentSchema, updatePostSchema } from "@/schemas/post.schema.js";
 import { postService } from "@/services/post.service.js";
 
 export const postController = {
@@ -39,5 +39,18 @@ export const postController = {
     const postId = String(req.params.id);
     const comment = await postService.addComment(postId, req.user!.id, data.content);
     return res.status(201).json(comment);
+  },
+
+  async updateComment(req: Request, res: Response) {
+    const data = updateCommentSchema.parse(req.body);
+    const commentId = String(req.params.commentId);
+    const comment = await postService.updateComment(commentId, req.user!.id, data.content);
+    return res.json(comment);
+  },
+
+  async deleteComment(req: Request, res: Response) {
+    const commentId = String(req.params.commentId);
+    const response = await postService.deleteComment(commentId, req.user!.id, req.user!.role);
+    return res.json(response);
   }
 };

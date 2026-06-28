@@ -11,3 +11,5 @@ postRoutes.put("/:id", ensureAuthenticated, asyncHandler(postController.update))
 postRoutes.delete("/:id", ensureAuthenticated, asyncHandler(postController.delete));
 postRoutes.post("/:id/like", ensureAuthenticated, asyncHandler(postController.toggleLike));
 postRoutes.post("/:id/comments", ensureAuthenticated, asyncHandler(postController.addComment));
+postRoutes.put("/comments/:commentId", ensureAuthenticated, asyncHandler(postController.updateComment));
+postRoutes.delete("/comments/:commentId", ensureAuthenticated, asyncHandler(postController.deleteComment));
