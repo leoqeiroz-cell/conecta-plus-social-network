@@ -116,7 +116,7 @@ Swagger: `http://localhost:3333/docs`
 docker compose up --build
 ```
 
-Frontend: `http://localhost:8080`
+Frontend: `http://localhost:8081`
 
 API: `http://localhost:3333/api`
 
@@ -175,6 +175,7 @@ Sugestao de roteiro:
 
 ```bash
 npm run lint
+npm run test
 npm run build
 ```
 

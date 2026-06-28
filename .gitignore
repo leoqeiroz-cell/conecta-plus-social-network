@@ -8,5 +8,6 @@ coverage
 Thumbs.db
 *.log
 *.tsbuildinfo
+docs/.rendered-report
 apps/api/prisma/dev.db
 apps/api/prisma/dev.db-journal
