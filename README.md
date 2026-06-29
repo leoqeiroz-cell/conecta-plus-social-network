@@ -168,7 +168,9 @@ Usuario:
 
 ## Pitch
 
-Link do pitch: substitua por um video de 2 a 4 minutos apresentando problema, solucao, demonstracao do produto e impacto social.
+Link do pitch: [video_pitch_final_com_audio.mp4](https://github.com/leoqeiroz-cell/conecta-plus-social-network/raw/main/docs/pitch/video_pitch_final_com_audio.mp4)
+
+O video apresenta problema, solucao, demonstracao do produto em funcionamento, recursos de colaboracao, painel administrativo, documentacao da API e impacto social academico.
 
 Sugestao de roteiro:
 
