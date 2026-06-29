@@ -1,12 +1,12 @@
 # Conecta+
 
-Conecta+ e uma rede social academica e comunitaria para aproximar estudantes, monitores e liderancas locais em torno de duvidas, projetos, oportunidades, materiais e grupos de estudo.
+Conecta+ e uma rede social academica e comunitaria que desenvolvi para organizar, em um unico ambiente, duvidas, projetos, oportunidades, materiais e grupos de estudo.
 
-O projeto foi desenvolvido como uma aplicacao full stack com Vue 3, TypeScript, PrimeVue, Tailwind CSS, Pinia e Vue Router no frontend; Node.js, Express, TypeScript, Prisma, PostgreSQL, Zod, JWT e bcrypt no backend.
+A ideia foi construir uma entrega full stack objetiva, demonstravel e facil de executar, usando Vue 3, TypeScript, PrimeVue, Tailwind CSS, Pinia e Vue Router no frontend; Node.js, Express, TypeScript, Prisma, PostgreSQL, Zod, JWT e bcrypt no backend.
 
 ## Proposta
 
-Muitas comunidades academicas perdem conhecimento em conversas dispersas, grupos temporarios e materiais sem organizacao. O Conecta+ centraliza esse fluxo em um produto simples: feed por categorias, perfis, ranking de colaboracao, comentarios, curtidas e grupos de estudo.
+Ao observar que muitas conversas academicas ficam perdidas em grupos e arquivos soltos, organizei o Conecta+ como um produto simples: feed por categorias, perfis, ranking de colaboracao, comentarios, curtidas e grupos de estudo.
 
 ## Funcionalidades
 
@@ -24,6 +24,16 @@ Muitas comunidades academicas perdem conhecimento em conversas dispersas, grupos
 - Swagger/OpenAPI em `/docs`.
 - Seed de dados para demonstracao.
 - Docker Compose para frontend, backend e banco.
+
+## Decisoes de Projeto
+
+- Escolhi Vue 3 com TypeScript porque queria uma interface reativa, componentizada e mais segura durante a evolucao do projeto.
+- Usei PrimeVue e Tailwind CSS juntos para acelerar a criacao dos componentes sem abrir mao de ajustes visuais finos e responsividade.
+- Optei por Express no backend por ser uma base simples, direta e adequada para uma API REST de hackathon, mantendo o codigo facil de explicar.
+- Modelei o banco com Prisma e PostgreSQL para ter relacoes claras, migrations versionadas e consultas mais previsiveis.
+- Implementei JWT com bcrypt para separar autenticacao, protecao de rotas e armazenamento seguro de senha.
+- Mantive Docker Compose como caminho principal de execucao para que frontend, API e banco subam de forma reproduzivel em uma unica etapa.
+- Organizei o backend em rotas, controllers, services, repositories e schemas Zod para deixar evidente onde ficam entrada HTTP, regra de negocio, acesso a dados e validacao.
 
 ## Arquitetura
 
@@ -158,10 +168,10 @@ Usuario:
 
 ![Painel administrativo](docs/screenshots/admin-preview.svg)
 
-- Ranking de colaboracao calculado por publicacoes, comentarios e interacoes.
+- Ranking de colaboracao calculado para valorizar participacao real, como publicacoes, comentarios e interacoes.
 - Grupos de estudo como camada comunitaria alem do feed.
 - Feed com filtros por categoria, busca textual e tags academicas.
-- Conteudo gerenciavel pelo proprio usuario, incluindo edicao, exclusao e moderacao.
+- Conteudo gerenciavel pelo proprio usuario, com edicao, exclusao e moderacao para simular um fluxo mais proximo de uma rede social real.
 - Perfil personalizavel com avatar gerado ou foto enviada pelo estudante.
 - Painel administrativo para leitura rapida de saude da comunidade.
 - UX com dark mode e interface responsiva voltada para apresentacao de hackathon.
@@ -170,7 +180,15 @@ Usuario:
 
 Link do pitch: [video_pitch_final_com_audio.mp4](https://github.com/leoqeiroz-cell/conecta-plus-social-network/raw/main/docs/pitch/video_pitch_final_com_audio.mp4)
 
-O video apresenta problema, solucao, demonstracao do produto em funcionamento, recursos de colaboracao, painel administrativo, documentacao da API e impacto social academico.
+O video apresenta o raciocinio da solucao, a demonstracao real do produto, os recursos de colaboracao, o painel administrativo, a documentacao da API e o impacto social academico.
+
+## Evolucao do Projeto
+
+- `56d2d8c`: implementacao inicial da rede social Conecta+.
+- `723b325`: aprimoramento da validacao tecnica e da documentacao da entrega.
+- `b1ced19`: adicao de gerenciamento de conteudo, comentarios e perfil editavel.
+- `6a44fa1`: inclusao do video final do pitch no repositorio e atualizacao do README.
+- Atualizacao final: refinamento do README e do relatorio com as decisoes tecnicas do projeto.
 
 Sugestao de roteiro:
 
